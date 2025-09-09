@@ -1,0 +1,301 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+     font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #1f242d;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: slateblue; */
+    padding: 25px 9%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: navbaranimation 1.5s linear  forwards;
+    animation-delay: 1s ;
+}
+@keyframes navbaranimation {
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.navbar ul{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.navbar ul li{
+    list-style: none;
+    /* border: 2px solid black; */
+}
+.navbar ul li a{
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    
+  transition: 0.3s ease;
+    &:hover{
+       
+        color: #7cf03d;
+      
+    }
+}
+.navbar ul li .active{
+    color: #7cf03d;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.about{
+    width: 80vw;
+    /* border: 2px solid white; */
+    margin: auto;
+ margin-top: 130px;
+    padding: 10px;
+}
+.boxes{
+/* border: 2px solid orange; */
+padding: 10px;
+display: flex;
+gap: 40px;
+}
+.menu{
+    width: 50vw;
+    height: 50vh;
+/* border: 2px solid orange; */
+padding: 20px;
+color: white;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.menu h2{
+    font-size: 34px;
+    font-weight: bold;
+}
+.menu p{
+    font-size: 16px;
+    font-weight: normal;
+}
+.boxes .menu .options{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    gap: 30px;
+     margin-top: 30px;
+}
+.boxes .menu .options a{
+   
+    border: none;
+    background-color: rgba(128, 128, 128, 0.366);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    &:hover{
+        color: #7cf03d;
+        border: 2px solid #7cf03d;
+    }
+}
+.info{
+padding: 20px;
+/* border: 2px solid rgb(255, 0, 170); */
+}
+.info h2{
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+}
+.info h2 span{
+    color: #7cf03d;
+    font-size: 44px;
+font-weight: bold;
+}
+.info p{
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+.info .experiences{
+    /* border: 2px solid slateblue; */
+    margin-top: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow: auto;
+    height: 100vh;
+}
+.info .experiences::-webkit-scrollbar{
+    display: none;
+}
+.experiences .box{
+    border: none;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.366) ;
+}
+.box .date{
+    font-weight: normal;
+    font-size: 16px;
+    color: #7cf03d;
+}
+.box h3{
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+.box p{
+     font-weight: normal;
+    font-size: 16px;
+}
+.box p span{
+    color: #7cf03d;
+    padding: 5px;
+    font-size: 0px;
+    border-radius: 50%;
+    background-color: #7cf03d;
+    display: inline-block;
+    vertical-align: middle;
+        transform: translatey(-2px);
+margin-right: 5px;
+}
+.box .skillbox{
+    color: white; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 10px;
+    justify-content: center;
+    padding: 25px 15px;
+    /* border: 2px solid green; */
+    margin: 20px;
+    
+}
+.box .skillbox .pics{
+   display: flex;
+   justify-content: center;
+ 
+}
+.box .skillbox .pics i{
+    transform: scale(3);
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover{
+  color: #7cf03d;
+    }
+  
+}
+     </style>
+</head>
+<body>
+      <nav class="navbar">
+        <a href="#" class="logo">My Portfolio</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="about">
+        <div class="boxes">
+            <div class="menu">
+                <h2>Why Hire Me...?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum doloremque incidunt blanditiis assumenda maiores voluptatibus iste nulla. Iusto ipsa deleniti saepe ullam, quia repellendus enim voluptatibus assumenda accusamus dolores!</p>
+                <div class="options">
+                    <a href="../about.html">Experience</a>
+                    <a href="education.html">Education</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="aboutme.html">More about Me</a>
+                </div>
+            </div>
+            <div class="info">
+                <h2>My <span>Skills </span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta vero quaerat quas expedita laudantium perferendis magni placeat, debitis itaque sunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum architecto laboriosam corporis deserunt assumenda accusantium expedita id distinctio dolorem sint!</p>
+                <div class="experiences">
+                    <div class="box">
+                        <p class="date">2021 - 2022</p>
+                        <h3>Video Editing</h2>
+                        <p><span>dot</span> GFX Mentor</p>
+                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima officia voluptatibus fuga quos alias obcaecati temporibus mollitia corrupti maxime sit.</p>
+                    </div>
+                     <div class="box">
+                        <p class="date">2022 - 2023</p>
+                        <h3>Diploma of English Language</h2>
+                        <p><span>dot</span>Universtity of Spoken English</p>
+                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima officia voluptatibus fuga quos alias obcaecati temporibus mollitia corrupti maxime sit.</p>
+                    </div>
+                     <div class="box">
+                        <p class="date">2023 - 2024</p>
+                        <h3>Programing in C language</h2>
+                        <p><span>dot</span>Universtity of Engineering and Technology, Peshawar</p>
+                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima officia voluptatibus fuga quos alias obcaecati temporibus mollitia corrupti maxime sit.</p>
+                    </div>
+                       <div class="box">
+                        <p class="date">2024 - 2025</p>
+                        <h3>Programing in JAVA language</h2>
+                        <p><span>dot</span>Universtity of Engineering and Technology, Peshawar</p>
+                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima officia voluptatibus fuga quos alias obcaecati temporibus mollitia corrupti maxime sit.</p>
+                    </div>
+                       <div class="box">
+                        <p class="date">2025 - Present</p>
+                        <h3>Full stack Web Development</h2>
+                        <p><span>dot</span>SMIT Peshawar</p>
+                        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima officia voluptatibus fuga quos alias obcaecati temporibus mollitia corrupti maxime sit.</p>
+                    </div>
+                      <div class="box">
+                  <div class="skillbox">
+                              <div class="pics"><i class='bx bxl-html5' title="HTML5"></i></div>
+            <div class="pics"><i class='bx bxl-css3' title="CSS3" ></i></div>
+            <div class="pics"><i class='bx bxl-javascript' title="Javascript" ></i></div>
+            <div class="pics"><i class='bx bxl-java' title="JAVA" ></i></div>
+            <div class="pics"><i class='bx bxl-c-plus-plus' title="C/C++" ></i></div>
+            <div class="pics"><i class='bx bxl-mongodb' title="MongoDB" ></i></div>
+            <div class="pics"><i class='bx bxl-postgresql' title="PostgreSql" ></i></div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+</body>
+</html>

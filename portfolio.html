@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My protfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+     font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #1f242d;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: slateblue; */
+    padding: 25px 9%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: navbaranimation 1.5s linear  forwards;
+    animation-delay: 1s ;
+}
+@keyframes navbaranimation {
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.navbar ul{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.navbar ul li{
+    list-style: none;
+    /* border: 2px solid black; */
+}
+.navbar ul li a{
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    
+  transition: 0.3s ease;
+    &:hover{
+       
+        color: #7cf03d;
+      
+    }
+}
+.navbar ul li .active{
+    color: #7cf03d;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.potfolio {
+    /* border: 2px solid green; */
+    width: 80vw;
+    margin: auto;
+    margin-top:120px;
+    padding: 20px;
+}
+.potfolio .label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label h1{
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+}
+.label h1 span{
+    color: #7cf03d;
+    font-weight: bold;
+}
+.main-container{
+    /* border: 2px solid yellow; */
+    border-radius: 25px;
+    background-color: rgba(96, 96, 96, 0.201);
+    margin-top: 50px;
+    width: 80vw;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.main-container .project-details{
+    width: 50vw;
+    /* border: 2px solid orange; */
+    padding: 20px;
+    height: 40vh;
+
+}
+.project-details .p-no{
+    /* border: 2px solid ; */
+}
+.project-details .p-no h2{
+    font-size: 50px;
+    -webkit-text-stroke: 0.5px  rgb(255, 255, 255);
+    color: transparent;
+    font-weight: bold;
+}
+.project-details .p-name h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.project-details .p-description p{ 
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 20px;
+}
+.project-details .p-technologies p{
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    color: #7cf03d;
+    margin-bottom: 20px;
+}
+
+.main-container .project-pics{
+    /* width: 30vw; */
+    /* border: 2px solid green; */
+    /* height: 45vh; */
+    padding: 10px;
+    /* overflow: hidden; */
+}
+.project-details .github a i {
+    transform: scale(1.5);
+   text-decoration: none;
+    display: inline-flex;
+    padding: 8px ;
+    /* background-color: white; */
+    color: #7cf03d;
+    border: 1px solid #7cf03d;
+    border-radius: 50%;
+    margin: 30px 10px ;
+    transition: 0.3s ease;
+    &:hover{
+        color: #1f242d;
+        box-shadow: 0 0 10px #7cf03d;
+        background-color: #7cf03d;
+        border: 1px solid #7cf03d;
+    }
+}
+.project-pics .image img{
+    height: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">My Portfolio</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="potfolio">
+        <div class="label">
+            <h1>My Latest <span> Projects</span></h1>
+        </div>
+        <div class="main-container">
+            <div class="project-details">
+                <div class="p-no">
+                    <h2>01</h2>
+                </div>
+                <div class="p-name">
+                    <h2>Frontend Project</h2>
+                </div>
+                <div class="p-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ea assumenda a facere enim. Porro cupiditate suscipit quo sint eos vitae est. Animi quod veniam consequuntur modi ratione aspernatur blanditiis.</p>
+                </div>
+                <div class="p-technologies">
+                    <p>HTML5, CSS3, Javascript</p>
+                </div>
+                <hr>
+                <div class="github">
+                    <a href="3" title="github repository"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="project-pics">
+                <div class="image">
+                    <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg" alt="pic">
+                </div>
+            </div>
+
+            
+        </div>
+
+         <div class="main-container">
+            <div class="project-details">
+                <div class="p-no">
+                    <h2>01</h2>
+                </div>
+                <div class="p-name">
+                    <h2>Frontend Project</h2>
+                </div>
+                <div class="p-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ea assumenda a facere enim. Porro cupiditate suscipit quo sint eos vitae est. Animi quod veniam consequuntur modi ratione aspernatur blanditiis.</p>
+                </div>
+                <div class="p-technologies">
+                    <p>HTML5, CSS3, Javascript</p>
+                </div>
+                <hr>
+                <div class="github">
+                    <a href="3" title="github repository"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="project-pics">
+                <div class="image">
+                    <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg" alt="pic">
+                </div>
+            </div>
+
+            
+        </div>
+
+         <div class="main-container">
+            <div class="project-details">
+                <div class="p-no">
+                    <h2>01</h2>
+                </div>
+                <div class="p-name">
+                    <h2>Frontend Project</h2>
+                </div>
+                <div class="p-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ea assumenda a facere enim. Porro cupiditate suscipit quo sint eos vitae est. Animi quod veniam consequuntur modi ratione aspernatur blanditiis.</p>
+                </div>
+                <div class="p-technologies">
+                    <p>HTML5, CSS3, Javascript</p>
+                </div>
+                <hr>
+                <div class="github">
+                    <a href="3" title="github repository"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="project-pics">
+                <div class="image">
+                    <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg" alt="pic">
+                </div>
+            </div>
+
+            
+        </div>
+
+         <div class="main-container">
+            <div class="project-details">
+                <div class="p-no">
+                    <h2>01</h2>
+                </div>
+                <div class="p-name">
+                    <h2>Frontend Project</h2>
+                </div>
+                <div class="p-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ea assumenda a facere enim. Porro cupiditate suscipit quo sint eos vitae est. Animi quod veniam consequuntur modi ratione aspernatur blanditiis.</p>
+                </div>
+                <div class="p-technologies">
+                    <p>HTML5, CSS3, Javascript</p>
+                </div>
+                <hr>
+                <div class="github">
+                    <a href="3" title="github repository"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="project-pics">
+                <div class="image">
+                    <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg" alt="pic">
+                </div>
+            </div>
+
+            
+        </div>
+
+         <div class="main-container">
+            <div class="project-details">
+                <div class="p-no">
+                    <h2>01</h2>
+                </div>
+                <div class="p-name">
+                    <h2>Frontend Project</h2>
+                </div>
+                <div class="p-description">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ea assumenda a facere enim. Porro cupiditate suscipit quo sint eos vitae est. Animi quod veniam consequuntur modi ratione aspernatur blanditiis.</p>
+                </div>
+                <div class="p-technologies">
+                    <p>HTML5, CSS3, Javascript</p>
+                </div>
+                <hr>
+                <div class="github">
+                    <a href="3" title="github repository"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="project-pics">
+                <div class="image">
+                    <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg" alt="pic">
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </section>
+</body>
+</html>
